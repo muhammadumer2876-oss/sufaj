@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufaj | Web Development & US LLC Registration</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --text-color: #f3f4f6;
+            --accent-color: #3b82f6; /* Electric Blue */
+            --muted-color: #9ca3af;
+            --card-bg: #111115;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 0 2rem;
+        }
+
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            text-transform: lowercase;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav a {
+            color: var(--muted-color);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--text-color);
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--muted-color);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 4rem 0 8rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 3rem;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        /* Web Dev on Top/Left styling tweak if desired, featured badge */
+        .featured {
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            position: relative;
+        }
+
+        .badge {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+
+        .card h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .card p {
+            color: var(--muted-color);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 0.75rem;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .card ul li::before {
+            content: "→";
+            color: var(--accent-color);
+            margin-right: 0.75rem;
+            font-weight: bold;
+        }
+
+        /* Footer / Contact */
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--muted-color);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: var(--text-color);
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body { padding: 0 1.5rem; }
+            .hero h1 { font-size: 2.75rem; }
+            .services { grid-template-columns: 1fr; gap: 1.5rem; }
+            .card { padding: 2rem; }
+            footer { flex-direction: column; gap: 1.5rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">sufaj<span>.</span></div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#contact">Connect</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>We build your digital infrastructure from <span>code to company.</span></h1>
+            <p>Sufaj crafts premium web solutions and clears the legal path for global founders establishing US business footprints.</p>
+            <a href="#contact" class="btn">Get in touch</a>
+        </section>
+
+        <section class="services" id="services">
+            <div class="card featured">
+                <span class="badge">Core</span>
+                <h2>Web Development</h2>
+                <p>Tailor-made digital experiences designed to convert. We build lightweight, high-performance, and visually stunning web architectures.</p>
+                <ul>
+                    <li>Custom React & Next.js builds</li>
+                    <li>Premium corporate landing pages</li>
+                    <li>E-commerce systems & API integrations</li>
+                    <li>SEO & performance optimization</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>US LLC Registration</h2>
+                <p>Fast, legally compliant company formation for both domestic and international entrepreneurs looking to scale under US law.</p>
+                <ul>
+                    <li>State filing & articles of organization</li>
+                    <li>Registered agent assignment</li>
+                    <li>EIN acquisition support</li>
+                    <li>Compliance & banking setup guidance</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2026 Sufaj. All rights reserved.</p>
+        <p>Let's collaborate: <a href="mailto:hello@sufaj.com">hello@sufaj.com</a></p>
+    </footer>
+
+</body>
+</html>
